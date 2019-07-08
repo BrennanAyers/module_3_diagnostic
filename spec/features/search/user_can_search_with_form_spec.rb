@@ -7,7 +7,9 @@ RSpec.describe 'As a user', type: :feature do
       # And I fill in the search form with "sweet potatoes"
       fill_in 'q', with: 'sweet potatoes'
       # And I click "Search"
-      click_on 'Search'
+      VCR.use_cassette('sweet_potato_search') do
+        click_on 'Search'
+      end
       # Then I should be on page "/foods"
       expect(current_path).to eq(foods_path)
       # Then I should see a total of the number of items returned by the search. (531 for sweet potatoes)
@@ -103,7 +105,9 @@ RSpec.describe 'As a user', type: :feature do
         ]
       visit root_path
       fill_in 'q', with: 'sweet potatoes'
-      click_on 'Search'
+      VCR.use_cassette('sweet_potato_search') do
+        click_on 'Search'
+      end
 
       foods = page.all('.food-info')
       foods.each_with_index do |food, index|
