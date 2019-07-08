@@ -3,7 +3,7 @@ class FoodSearchFacade
 
   def initialize(query)
     @food_json = food_search(query)
-    @result_count = @food_json[:total]
+    @result_count = @food_json[:list][:total]
   end
 
   def food_search(query)
@@ -11,7 +11,7 @@ class FoodSearchFacade
   end
 
   def results
-    @food_json[:item].map do |food|
+    @food_json[:list][:item].map do |food|
       Food.new(food)
     end
   end
