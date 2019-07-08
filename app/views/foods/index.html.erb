@@ -4,7 +4,11 @@
 <section id='search-results'>
   <% facade.results.each do |food| %>
     <div class="food-info">
-      <p>Placeholder Title</p>
+      <p>NDB Number: <%= food.ndbno %></p>
+      <p>Name: <%= food.name %></p>
+      <p>Food Group: <%= food.group %></p>
+      <p>Data Source: <%= food.data_source %></p>
+      <p>Manufacturer: <%= food.manufacturer %></p>
     </div>
   <% end %>
 </section>
