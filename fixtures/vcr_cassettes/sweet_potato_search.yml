@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.nal.usda.gov/ndb/search?api_key=<API-KEY>&max=10&q=sweet%20potatoes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 08 Jul 2019 17:04:51 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3578'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=63072000; includeSubDomains; preload
+      Age:
+      - '0'
+      Via:
+      - https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+      X-Cache:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+            "list": {
+                "q": "sweet potatoes",
+                "sr": "1",
+                "ds": "any",
+                "start": 0,
+                "end": 10,
+                "total": 531,
+                "group": "",
+                "sort": "r",
+                "item": [
+                    {
+                        "offset": 0,
+                        "group": "Branded Food Products Database",
+                        "name": "ONE POTATO TWO POTATO, PLAIN JAYNES, SWEET POTATO CHIPS, UPC: 785654000544",
+                        "ndbno": "45094945",
+                        "ds": "LI",
+                        "manu": "Dieffenbach's Potato Chips"
+                    },
+                    {
+                        "offset": 1,
+                        "group": "Branded Food Products Database",
+                        "name": "TERRA, SWEET POTATO CHIPS, PUMPKIN SPICE SWEETS, UPC: 728229014751",
+                        "ndbno": "45165952",
+                        "ds": "LI",
+                        "manu": "THE HAIN CELESTIAL GROUP, INC."
+                    },
+                    {
+                        "offset": 2,
+                        "group": "Branded Food Products Database",
+                        "name": "CHILI'S, SWEET & SPICY CHICKEN & SWEET POTATOES, BIG BOLD, UPC: 717854470377",
+                        "ndbno": "45109414",
+                        "ds": "LI",
+                        "manu": "Bellisio Foods Inc"
+                    },
+                    {
+                        "offset": 3,
+                        "group": "Branded Food Products Database",
+                        "name": "SWEET POTATO POPPED POTATO CRISPS, UPC: 075450137415",
+                        "ndbno": "45219208",
+                        "ds": "LI",
+                        "manu": "Hy-Vee, Inc."
+                    },
+                    {
+                        "offset": 4,
+                        "group": "Branded Food Products Database",
+                        "name": "SWEET POTATO KETTLE POTATO CHIPS, UPC: 762111242839",
+                        "ndbno": "45324838",
+                        "ds": "LI",
+                        "manu": "STARBUCKS COFFEE COMPANY"
+                    },
+                    {
+                        "offset": 5,
+                        "group": "Branded Food Products Database",
+                        "name": "SWEET POTATOES, RED POTATOES, CARROTS & PARSNIPS VEGETABLES FOR ROASTING, UPC: 070560970907",
+                        "ndbno": "45372027",
+                        "ds": "LI",
+                        "manu": "The Pictsweet Company"
+                    },
+                    {
+                        "offset": 6,
+                        "group": "Vegetables and Vegetable Products",
+                        "name": "Sweet potato leaves, raw",
+                        "ndbno": "11505",
+                        "ds": "SR",
+                        "manu": "none"
+                    },
+                    {
+                        "offset": 7,
+                        "group": "Vegetables and Vegetable Products",
+                        "name": "Sweet potato, raw, unprepared (Includes foods for USDA's Food Distribution Program)",
+                        "ndbno": "11507",
+                        "ds": "SR",
+                        "manu": "none"
+                    },
+                    {
+                        "offset": 8,
+                        "group": "Vegetables and Vegetable Products",
+                        "name": "Sweet potato, canned, mashed",
+                        "ndbno": "11514",
+                        "ds": "SR",
+                        "manu": "none"
+                    },
+                    {
+                        "offset": 9,
+                        "group": "Vegetables and Vegetable Products",
+                        "name": "Sweet potato, frozen, unprepared (Includes foods for USDA's Food Distribution Program)",
+                        "ndbno": "11516",
+                        "ds": "SR",
+                        "manu": "none"
+                    }
+                ]
+            }
+        }
+    http_version: 
+  recorded_at: Mon, 08 Jul 2019 17:04:51 GMT
+recorded_with: VCR 5.0.0
