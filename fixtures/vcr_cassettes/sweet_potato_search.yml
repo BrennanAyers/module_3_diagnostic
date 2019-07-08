@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.nal.usda.gov/ndb/search?api_key=TbA6Jg3ZStFTEZJxTyo9HkPrhKjspJo0gmNbsUz4&max=10&q=sweet%20potatoes
+    uri: https://api.nal.usda.gov/ndb/search?api_key=<API-KEY>&max=10&q=sweet%20potatoes
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 08 Jul 2019 16:40:30 GMT
+      - Mon, 08 Jul 2019 17:04:51 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -33,7 +33,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '3600'
       X-Ratelimit-Remaining:
-      - '3576'
+      - '3578'
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -149,5 +149,5 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Mon, 08 Jul 2019 16:40:30 GMT
+  recorded_at: Mon, 08 Jul 2019 17:04:51 GMT
 recorded_with: VCR 5.0.0
