@@ -13,7 +13,9 @@ RSpec.describe 'As a user', type: :feature do
       # Then I should see a total of the number of items returned by the search. (531 for sweet potatoes)
       expect(page).to have_content('531 results')
       # Then I should see a list of ten foods sorted by relevance.
-      expect(page).to have_content('Sweet Potato Things')
+      within("#search-results") do
+        expect(page).to have_selector(".food-info", count: 10)
+      end
     end
   end
 end
