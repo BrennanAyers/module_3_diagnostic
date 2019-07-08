@@ -17,12 +17,13 @@ group :development, :test do
   gem 'pry'
   gem 'awesome_print'
   gem 'figaro'
-  gem 'vcr'
 end
 
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do
