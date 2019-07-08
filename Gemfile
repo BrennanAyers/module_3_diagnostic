@@ -16,6 +16,8 @@ gem 'faraday'
 group :development, :test do
   gem 'pry'
   gem 'awesome_print'
+  gem 'figaro'
+  gem 'vcr'
 end
 
 group :test do
